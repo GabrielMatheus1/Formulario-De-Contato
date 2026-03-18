@@ -6,10 +6,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: URL('imgs/backgrounds/Redes-Form-Dep.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;   
 }
 
 /* animacao de carregamento */
@@ -59,9 +55,6 @@
   color: #fff;
   position: relative;
   overflow: hidden;
-  background-image: url('imgs/backgrounds/Fundo-Form.png');
-  background-position: -50px 10px;
-  background-repeat: no-repeat;
   box-shadow: 0 0 10px #fff;
 }
 
