@@ -1,6 +1,17 @@
-# *Formulário interativo*
+# Formulário de Contato
 
-Este formulário interativo para contato, ao ser preenchido passará por etapas até concluir o formulário, e no final enviará as informações para armazenar em uma planilha.
+Projeto simples de **Formulário de Contato** para coletar informações do usuário (nome, e-mail e telefone).
 
-- Não recarrega a pagina.
-- Gif de background.
+## Demonstração
+
+
+## Funcionalidades
+- Campos: **Nome**, **E-mail**, **Telefone**
+- Validação básica dos campos
+- Layout responsivo
+- Envio dos dados para uma planilha via API **SheetDB**
+
+## Tecnologias
+- HTML
+- CSS
+- JavaScript
