@@ -4,7 +4,8 @@ Projeto front-end de um formulario de contato em etapas, desenvolvido com HTML, 
 
 ## Preview
 
-aqui
+<img width="1224" height="842" alt="image" src="https://github.com/user-attachments/assets/ab21b871-98e1-4954-b088-8b26d21361e2" />
+
 
 ## Visao geral
 
