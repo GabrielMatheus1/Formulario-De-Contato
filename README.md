@@ -1,87 +1,78 @@
-# Formulario de Contato
+# Formulário de Contato
 
-Projeto front-end de um formulario de contato em etapas, desenvolvido com HTML, CSS e JavaScript puro. A interface conduz o usuario por um fluxo simples de preenchimento com nome, WhatsApp e e-mail, exibindo uma tela de carregamento entre os passos e enviando os dados para uma planilha via SheetDB.
+Um protótipo front-end de formulário de contato dividido em etapas. A interface reúne campos para nome, WhatsApp e e-mail, além de uma tela de confirmação e uma camada visual de carregamento.
 
-## Preview
+## Demonstração
 
-<img width="1224" height="842" alt="image" src="https://github.com/user-attachments/assets/ab21b871-98e1-4954-b088-8b26d21361e2" />
+[![Acessar projeto](https://img.shields.io/badge/Acessar%20projeto-8A2BE2?style=for-the-badge&logo=github&logoColor=white)](https://gabrielmatheus1.github.io/Formulario-De-Contato/)
 
+![Prévia do Formulário de Contato](./src/img/preview.png)
 
-## Visao geral
+## Estrutura do formulário
 
-O formulario foi estruturado como um fluxo dividido em quatro estados:
+A interface está organizada em quatro etapas:
 
-- Passo 1: preenchimento do nome
-- Passo 2: preenchimento do WhatsApp
-- Passo 3: preenchimento do e-mail
-- Passo 4: mensagem final de confirmacao
+1. Preenchimento do nome
+2. Preenchimento do WhatsApp
+3. Preenchimento do e-mail e aceite dos termos
+4. Mensagem de confirmação do contato
 
-Entre as transicoes, o projeto exibe uma camada de loading para dar feedback visual ao usuario durante a navegacao entre etapas.
+## Recursos visuais
 
-## Funcionalidades
+- Formulário organizado em blocos independentes
+- Botões para avançar e voltar entre as etapas
+- Estilos específicos para botões desabilitados
+- Animação de carregamento com `@keyframes`
+- Efeitos de interação nos botões
+- Tela final de confirmação
+- Layout centralizado com identidade visual escura
 
-- Formulario multi-step com navegacao entre etapas
-- Validacao basica no front-end para nome, telefone e e-mail
-- Habilitacao progressiva dos botoes conforme o preenchimento
-- Tela de carregamento entre os passos do formulario
-- Envio dos dados com fetch para um endpoint da API SheetDB
-- Estrutura simples, sem dependencias externas ou processo de build
-
-## Tecnologias utilizadas
+## Tecnologias
 
 - HTML5
 - CSS3
-- JavaScript Vanilla
-- SheetDB para persistencia dos dados enviados
+- Animações com `@keyframes`
+- SheetDB configurado no atributo `action` do formulário
 
-## Estrutura do projeto
+## Como funciona
 
-```text
-|
-├─ index.html
-├─ README.md
-└─ src
-    ├─ css
-    │   ├─ estilo.css
-    │   └─ reset.css
-    └─ js
-        └─ app.js
-```
+As etapas usam a classe `.step` e ficam ocultas por padrão. A classe `.active` identifica a etapa visível, começando pelo campo de nome. O HTML também contém as demais etapas, a tela de carregamento e a mensagem final.
 
-## Como executar
-
-Como este projeto e estatico, nao ha etapa de build ou instalacao de dependencias.
-
-## Logica do formulario
-
-O comportamento principal esta centralizado no arquivo src/js/app.js:
-
-- valida o nome com quantidade minima de caracteres
-- valida o telefone antes de avancar para a proxima etapa
-- valida o formato do e-mail antes da conclusao
-- alterna as classes active entre os blocos de cada etapa
-- envia os dados com FormData para o endpoint definido no atributo action do formulario
-
-## Integracao com SheetDB
-
-O envio e feito diretamente pelo atributo action do formulario:
+O formulário está configurado com um endpoint do SheetDB e o método `POST`:
 
 ```html
 <form id="form" action="https://sheetdb.io/api/v1/uvlkbzlcj05oj" method="post">
 ```
 
-E pela chamada fetch no JavaScript, que envia os dados preenchidos para a API.
+## Estado atual
 
-Se quiser reutilizar este projeto com outra planilha, basta substituir a URL do endpoint configurada no formulario.
+A versão atual contém a estrutura visual completa. A navegação entre etapas, as validações e o controle do envio dependem de JavaScript, que não está presente no código atual.
 
-## Melhorias futuras
+## Estrutura do projeto
 
-- [ ] exibir mensagens de erro mais claras para cada campo
-- [ ] melhorar a acessibilidade dos controles e estados do formulario
-- [ ] adicionar mascara visual para telefone
-- [ ] tratar retorno de sucesso e falha da API de forma mais completa
-- [ ] revisar responsividade para telas menores
+```text
+Formulario-De-Contato/
+├── index.html
+├── src/
+│   ├── css/
+│   │   ├── estilo.css
+│   │   └── reset.css
+│   └── img/
+│       ├── icon.png
+│       └── preview.png
+└── README.md
+```
+
+## Aprendizados
+
+Este projeto foi desenvolvido para praticar:
+
+- Estruturação de formulários em etapas
+- Organização de componentes com classes CSS
+- Estados visuais de campos e botões
+- Animações com CSS
+- Configuração de um formulário para envio por API
 
 ## Autor
 
-Desenvolvido por Gabriel Izidoro para estudos de desenvolvimento web.
+Desenvolvido por [Gabriel Izidoro](https://github.com/GabrielMatheus1).
